@@ -42,7 +42,9 @@ export const ListaDePosts = () => {
       {posts.map((post) => (
         <div key={post.id} className="post">
           {post.user && (
-            <img src={`${post.user?.avatar}/${post.user?.id}`} alt="avatar" />
+            <a href={`/users/${post.user.id}`}>
+              <img src={`${post.user?.avatar}/${post.user?.id}`} alt="avatar" />
+            </a>
           )}
           <h3>{post.title}</h3>
           <p>{post.content}</p>

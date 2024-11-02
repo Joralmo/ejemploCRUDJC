@@ -9,6 +9,7 @@ import { Registro } from "./components/registro";
 import { IniciarSesion } from "./components/iniciarSesion";
 import { NuevoPost } from "./components/nuevoPost";
 import { ListaDePosts } from "./components/listaDePosts";
+import { Perfil } from "./components/perfil";
 
 function App() {
   const isAuthenticated = () => {
@@ -47,6 +48,14 @@ function App() {
           element={
             <PrivateRoute>
               <ListaDePosts />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/users/:id"
+          element={
+            <PrivateRoute>
+              <Perfil />
             </PrivateRoute>
           }
         />
